@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <title>TripCast Weather Route App</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <script>
+            $(document).ready(function () {
+                $('#infoModal').modal('show');
+            });
+        </script>
+        <div class ="container">
+            <div class="jumbotron text-center">
+                <div class="page-header">
+                    <h1>TRIPCAST</h1>
+                </div>
+                <p>Your solution to Mother Nature</p>
+            </div>
+
+            <div class="modal fade" id="infoModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Welcome to TripCast</h4>
+                        </div>
+                        <div class="modal-body text-justify">
+                            <p>Have you ever been frustrated using GPS Navigation Weather updates? 
+                                Often you receive a notification when it is already too late to 
+                                change course to avoid it. If you or a loved one have been the victim of
+                                this unfortunate problem fear not! You don't have to suffer anymore!<br><br>
+
+                                TripCast is a Route Planning Forecast system that seeks to solve this problem
+                                by allowing you to be able to see all of the current weather conditions at every
+                                leg of your trip. Once a route has been planned it will show you all the CURRENT 
+                                CONDITIONS along the major way-points of the route.<br><br> 
+
+                                All YOU have to do is tell it your origin and destination and then it will do the
+                                rest. It's that EASY! So let TripCast handle the planning so you can focus on whats
+                                important, the trip.
+
+                                No longer will Mother Nature have the drop on you. Take back your freedom and
+                                command your road trip like a boss. You own the road. Don't let it own you.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Begin Thwarting Mother Nature</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form action="WeatherRouteHandler" method="POST">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading clearfix">
+                                <i class="icon-calendar"></i>
+                                <h2 class="panel-title text-center">Plan your trip!</h2>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Origin</span>
+                                            <input type="text" class="form-control" placeholder="Enter a City Name" name="origin">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Destination</span>
+                                            <input type="text" class="form-control" placeholder="Enter a City Name" name="destination"> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4">
+                                        <div class="input-group" style="width:100%">
+                                            <button type="submit" class="btn btn-primary btn-block">Get Weather</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

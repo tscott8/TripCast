@@ -1,0 +1,6 @@
+weatherRoute\WeatherHandler.class
+weatherRoute\WeatherRouteHandler.class
+weatherRoute\Location.class
+weatherRoute\MapHandler.class
+weatherRoute\TileHandler.class
+weatherRoute\Tile.class
